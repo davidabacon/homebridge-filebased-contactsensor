@@ -1,7 +1,7 @@
 {
     "name": "homebridge-filebased-contactsensor",
     "description": "A filebased doorsensor",
-    "version": "0.0.14",
+    "version": "0.0.15",
     "author": "David Bacon <david_a_bacon@yahoo.com>",
     "homepage": "https://github.com/davidabacon/homebridge-filebased-contactsensor",
     "license": "Apache-2.0",
