@@ -50,17 +50,22 @@ DoorSensorAccessory.prototype = {
     isDoorClosed: function() {
         this.log("closed file path", this.closedfilepath);
         if (!fs.existsSync(this.closedfilepath) && !fs.existsSync(this.openfilepath)) {
+            this.log('Neither open or closed file exists');
             return true;
         } else {
             if (!fs.existsSync(this.openfilepath)) {
+                this.log('There is no open file, so gate is closed');
                 return true;
             }else {
                 var statsOpen = fs.statSync(this.openfilepath);
                 var statsClosed = fs.statSync(this.closedfilepath);
-
-                if (statsClosed.mtime >= statsOpen.mtime) {
+                this.log('closed file mod time is ' + statsClosed.mtime);
+                this.log('open file mod time is ' + statsOpen.mtime);
+                if (statsClosed.mtime <= statsOpen.mtime) {
+                        this.log('Closed file is older than open file, door is open');
                         return true;
                 } else {
+                    this.log('Open file is newer than closed file, the gate is open');
                     return false;
                 }
             }
