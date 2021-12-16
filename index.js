@@ -2,6 +2,7 @@ var Service;
 var Characteristic;
 var DoorState;
 var crypto = require("crypto");
+var fs = require('fs');
 
 module.exports = function(homebridge) {
     Service = homebridge.hap.Service;
