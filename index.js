@@ -48,14 +48,14 @@ DoorSensorAccessory.prototype = {
 
     isDoorClosed: function() {
         this.log("closed file path", this.closedfilepath);
-        if (!existsSync(this.closedfilepath) && !existsSync(this.openfilepath)) {
+        if (!fs.existsSync(this.closedfilepath) && !fs.existsSync(this.openfilepath)) {
             return true;
         } else {
-            if (!existsSync(this.openfilepath)) {
+            if (!fs.existsSync(this.openfilepath)) {
                 return true;
             }else {
-                var statsOpen = statSync(this.openfilepath);
-                var statsClosed = statSync(this.closedfilepath);
+                var statsOpen = fs.statSync(this.openfilepath);
+                var statsClosed = fs.statSync(this.closedfilepath);
 
                 if (statsClosed.mtime >= statsOpen.mtime) {
                         return true;
