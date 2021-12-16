@@ -50,7 +50,7 @@ DoorSensorAccessory.prototype = {
     },
 
     isDoorClosed: function() {
-        this.log("closed file path", this.closedfilepath);
+//        this.log("closed file path", this.closedfilepath);
         if (!fs.existsSync(this.closedfilepath) && !fs.existsSync(this.openfilepath)) {
 //            this.log('Neither open or closed file exists');
             return true;
