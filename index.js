@@ -18,6 +18,7 @@ function DoorSensorAccessory(log, config) {
   this.name = config["name"];
   this.openfilepath = config["openpath"];
   this.closedfilepath = config["closedpath"];
+  this.sensorPollInMs = 500;
 
   if(config["sn"]){
       this.sn = config["sn"];
@@ -32,7 +33,7 @@ function DoorSensorAccessory(log, config) {
 
   this.isClosed = true;
   this.service = new Service.ContactSensor(this.name);
-
+  setTimeout(this.monitorDoorState.bind(this), this.sensorPollInMs);
 }
 
 DoorSensorAccessory.prototype = {
@@ -45,6 +46,7 @@ DoorSensorAccessory.prototype = {
     monitorDoorState: function() {
         this.isClosed = this.isDoorClosed();
         this.service.getCharacteristic(Characteristic.ContactSensorState).setValue(this.isClosed);
+        setTimeout(this.monitorDoorState.bind(this), this.sensorPollInMs);
     },
 
     isDoorClosed: function() {
