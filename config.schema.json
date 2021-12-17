@@ -1,5 +1,5 @@
 {
-    "pluginAlias": "FileBasedContactSensor",
+    "pluginAlias": "DoorSensor",
     "pluginType": "accessory",
     "schema": {
       "type": "object",
