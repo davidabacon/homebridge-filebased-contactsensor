@@ -1,10 +1,9 @@
 {
     "pluginAlias": "FileBasedContactSensor",
-    "pluginType": "platform",
-    "singular": true,
+    "pluginType": "accessory",
     "schema": {
       "type": "object",
-      "properties": {
+        "properties": {
           "devices": {
             "type" : "array",
             "items" : {
@@ -15,7 +14,7 @@
                   "title": "Name",
                   "type": "string",
                   "required": true,
-                  "default": "FileBased contact Sensor Platform"
+                  "default": "Gate"
                   },
                 "openpath": {
                   "title": "Location of open status file",
