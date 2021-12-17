@@ -5,24 +5,33 @@
     "schema": {
       "type": "object",
       "properties": {
-        "name": {
-          "title": "Name",
-          "type": "string",
-          "required": true,
-          "default": "FileBased contact Sensor Platform"
-        },
-        "openpath": {
-          "title": "Location of open status file",
-          "type" : "string",
-          "required" : true,
-          "default" : "/yolink/alarm/devices/patiogate/open.txt"
-        },
-        "closedpath": {
-          "title": "Location of closed status file",
-          "type" : "string",
-          "required" : true,
-          "default" : "/yolink/alarm/devices/patiogate/closed.txt"
+          "devices": {
+            "type" : "array",
+            "items" : {
+              "title": "Device",  
+              "type" : "object",
+              "properties" : {
+                "name": {
+                  "title": "Name",
+                  "type": "string",
+                  "required": true,
+                  "default": "FileBased contact Sensor Platform"
+                  },
+                "openpath": {
+                  "title": "Location of open status file",
+                  "type" : "string",
+                  "required" : true,
+                  "default" : "/yolink/alarm/devices/patiogate/open.txt"
+                  },
+                "closedpath": {
+                  "title": "Location of closed status file",
+                  "type" : "string",
+                  "required" : true,
+                  "default" : "/yolink/alarm/devices/patiogate/closed.txt"
+                  }
+                }
+              }
+            }
+          }
         }
-      }
-    }
   }
