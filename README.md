@@ -3,7 +3,7 @@ A filebased contact sensor for Homebridge
 
 This plugin sensor monitors the modification time of an "open file" and a "closed file" to determine the state of a door.
 
-For background, this is my way of kluding together integration of a yolink door sensors into homekit.
+For background, this is my way of kludging together integration of a yolink door sensors into homekit.
 
 My particular setup relies on several interconnected components:
 
