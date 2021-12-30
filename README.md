@@ -24,6 +24,7 @@ Configure the plugin as follows:
             "accessory": "DoorSensor"
         }
         
+        
 The logic works as follows:
 
   * If neither the openpath or closedpath file exist, then the door is closed
