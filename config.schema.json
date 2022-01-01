@@ -1,6 +1,6 @@
 {
     "pluginAlias": "DoorSensor",
-    "plugintype": "accessory",
+    "pluginType": "accessory",
     "singular": false,
     "headerDisplay": "Configure your file based contact sensors here",
     "footerDisplay": "Plugin brought to you by david_a_bacon@yahoo.com",
