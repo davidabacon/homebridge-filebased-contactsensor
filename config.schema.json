@@ -4,7 +4,7 @@
     "singular": false,
     "headerDisplay": "Configure your file based contact sensors here",
     "footerDisplay": "Plugin brought to you by david_a_bacon@yahoo.com",
-    "$schema": {
+    "schema": {
         "type": "object",
         "properties": {
             "name" : {
