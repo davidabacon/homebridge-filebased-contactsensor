@@ -1,5 +1,5 @@
 {
-    "pluginAlias": "FileBased-ContactSensor",
+    "pluginAlias": "DoorSensor",
     "plugintype": "accessory",
     "singular": false,
     "headerDisplay": "Configure your file based contact sensors here",
@@ -16,14 +16,14 @@
             "openpath": {
                 "title" : "Open file",
                 "type" : "string",
-                "placeholder" : "/yolink/devices/sensorname/open.txt",
+                "placeholder" : "/yolink/alarms/devices/sensorname/open.txt",
                 "required" : true,
                 "description" : "File that is updated when gate is opened. "
             },
             "closedpath": {
                 "title" : "Closed file",
                 "type" : "string",
-                "placeholder" : "/yolink/devices/sensorname/closed.txt",
+                "placeholder" : "/yolink/alarms/devices/sensorname/closed.txt",
                 "required" : true,
                 "description" : "File that is updated when gate is closed. "
             }
