@@ -1,8 +1,6 @@
 {
-    "pluginAlias": "DoorSensor",
+    "pluginAlias": "homebridge-filebased-contactsensor",
     "pluginType": "accessory",
-    "headerDisplay": "Configure your file based contact sensors here",
-    "footerDisplay": "Plugin brought to you by david_a_bacon@yahoo.com",
     "schema": {
         "type": "object",
         "properties": {
