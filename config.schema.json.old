@@ -1,0 +1,29 @@
+{
+    "pluginAlias": "homebridge-filebased-contactsensor",
+    "pluginType": "accessory",
+    "schema": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "title": "Sensor Name",
+                "type": "string",
+                "required": true,
+                "description": "Name for the door"
+            },
+            "openpath": {
+                "title": "Open file",
+                "type": "string",
+                "placeholder": "/yolink/alarms/devices/sensorname/open.txt",
+                "required": true,
+                "description": "File that is updated when gate is opened. "
+            },
+            "closedpath": {
+                "title": "Closed file",
+                "type": "string",
+                "placeholder" : "/yolink/alarms/devices/sensorname/closed.txt",
+                "required": true,
+                "description": "File that is updated when gate is closed. "
+            }
+        }
+    }
+}
